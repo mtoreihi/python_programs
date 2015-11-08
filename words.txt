@@ -1,0 +1,3 @@
+test=mtoreihi
+Test=Mtoreihi
+TEST=MTOREIHI
