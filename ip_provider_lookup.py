@@ -8,8 +8,8 @@ def get_provider(ip):
     html.prettify()
     data = html.findAll('td')
 
-    #line = BeautifulSoup(data[3])
-    #print line
+    line = BeautifulSoup(str(data[3]))
+    print line.text
 
     return data[3]
 
@@ -18,7 +18,7 @@ try:
     wb = load_workbook(filename)
     ws = wb.active
 
-    for i in range(1000, 1500):
+    for i in range(2, 3):
         row_ip = ws['A'+str(i)].value
         print(row_ip)
         provider = get_provider(row_ip)
